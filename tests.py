@@ -35,18 +35,18 @@ def test_02():
     0.629
     """
 
-    x_train, x_test, y_train, y_test = preguntas.pregunta_02()
+    X_train, X_test, y_train, y_test = preguntas.pregunta_02()
 
-    assert x_train.sex.value_counts().to_dict() == {"male": 536, "female": 502}
-    assert x_test.sex.value_counts().to_dict() == {"female": 160, "male": 140}
-    assert x_train.region.value_counts().to_dict() == {
+    assert X_train.sex.value_counts().to_dict() == {"male": 536, "female": 502}
+    assert X_test.sex.value_counts().to_dict() == {"female": 160, "male": 140}
+    assert X_train.region.value_counts().to_dict() == {
         "southeast": 289,
         "northwest": 261,
         "southwest": 244,
         "northeast": 244,
     }
 
-    assert x_test.region.value_counts().to_dict() == {
+    assert X_test.region.value_counts().to_dict() == {
         "southwest": 81,
         "northeast": 80,
         "southeast": 75,
